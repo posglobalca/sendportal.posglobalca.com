@@ -41,8 +41,7 @@ class SendMailCommand extends Command
         $exitCode = Artisan::call('queue:work', [
             '--queue'       => 'sendportal-message-dispatch',
             '--tries'       => 3,
-            '--max-time'    => 60,
-            '--max-jobs'    => 10,
+            '--max-jobs'    => 3,
         ]);
     }
 }
